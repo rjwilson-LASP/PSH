@@ -5,7 +5,7 @@ These are Community Codes for Planetary Spherical Harmonic Internal Field codes,
 
 Just download the particular file you want (language, particular model, and if Cartesian (xyz) or Spherical (rtp)) to your local directory, and run.  No 'install' required and each code is independent.  They can be run with scalar inputs, or with 1D vector inputs.  For MATLAB, the 1D vector must be a column vector not a row vector (while the code could check and transpose if neccessary, that would slow it down.) For Python, you must have NumPy installed and the inputs can be a list or NumPy array.
 
-The comments at the top of each code provide citations to papers where the g and h coefficients were sourced, and other info.
+The comments at the top of each code provide citations to papers where the *g* and *h* coefficients were sourced, and other info.
 All inputs are in a **right-handed System III (1965)** frame, with distances in units of R<sub>J</sub>, where **1 R<sub>J</sub> = 71,492 km always**, and angles (for spherical) in units of radians.  All these codes are set up to use degree = order.
 
 These codes will take inputs in Cartesian ([*x*,*y*,*z*] in units of R<sub>J</sub>) or Spherical ([*r*, *Co-Lat.*, *East Long.*] in units of R<sub>J</sub> and radians) and return the internal planetary field model values ([*B<sub>x</sub>*, *B<sub>y</sub>*, *B<sub>z</sub>*] or [*B<sub>r</sub>*, *B<sub>theta</sub>*, *B<sub>phi</sub>*] respectively, in units of nT). For older models that used different values of R<sub>J</sub>, our codes below still expect inputs where R<sub>J</sub> = 71,492 km, and will adjust the R<sub>J</sub> for you within the code.
