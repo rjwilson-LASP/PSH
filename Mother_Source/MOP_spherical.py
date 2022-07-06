@@ -96,7 +96,7 @@ def add_original_g_h(readme,start_txt,x,gh_dp,yIDL,yMatlab,yPython,lineend,stand
             if (yMatlab == 1):
                 # Uses Matlab comment, but hardcoded
                 line_to_add += lineend
-                line_to_add += ' %s Matlab starts at index 1, not 0, so no value on this first line compared to IDL & Python output'%standards['comment_Matlab']
+                line_to_add += ' %s MATLAB starts at index 1, not 0, so no value on this first line compared to IDL & Python output'%standards['comment_Matlab']
             else:
                 if (x[0]!=0):
                     print("Error.... x[0] not 0")
@@ -473,7 +473,7 @@ for model in (models_to_do): # loop for different models?
 
         # Make relative paths for system             planet
         outfile_IDLpro = os.path.join(root_output_dir,planet,'IDL'   )
-        outfile_MATLAB = os.path.join(root_output_dir,planet,'Matlab')
+        outfile_MATLAB = os.path.join(root_output_dir,planet,'MATLAB')
         outfile_PYTHON = os.path.join(root_output_dir,planet,'Python')
 
         if not os.path.exists(outfile_IDLpro):
@@ -571,7 +571,7 @@ for model in (models_to_do): # loop for different models?
         (IDLpro,MATLAB,PYTHON) = add_blank_line(IDLpro,MATLAB,PYTHON)
 
         # IDL only lines for errors
-        IDLpro.extend(["  ON_ERROR, 2 %s Exit code if an error in main, don't stop in code - no Matlab equivalent, just delete line in Matlab"%standards['comment_IDLpro']])
+        IDLpro.extend(["  ON_ERROR, 2 %s Exit code if an error in main, don't stop in code - no MATLAB equivalent, just delete line in MATLAB"%standards['comment_IDLpro']])
         IDLpro.extend([""])
 
         # Start new section
