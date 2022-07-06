@@ -18,7 +18,7 @@ These run quickly, but the higher the order, the longer it takes simply due to m
 
 ## Spherical Harmonic Models Included
 
-We recommend using JRM33 order 13, but here is the list of existing models.  All were developed in a right-handed System III (1965) system (some earlier models used System III (1957)), but assumed different values for what 1 R<sub>J</sub> was.
+We recommend using JRM33 order 13, but here is the list of existing models.  All these were developed in a right-handed System III (1965) system (some earlier models had used System III (1957)), but assumed different values for what 1 R<sub>J</sub> was.
 
 | Model | Order | Planet  | Original Model Reference | R<sub>J</sub> used in original work | Reference used for *g* and *h* values | Other references for *g* and *h* values |
 | ----- | ----- | ------- |----------------------- | ---- | ---------------------- | ---------------------- |
