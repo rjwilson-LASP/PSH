@@ -20,10 +20,10 @@ def jovian_vipal_order05_internal_rtp( r_rj, colat_rads, elong_rads):
     # It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
     #
     # Version Info:
-    #  Last update of this file: 2022-07-05 14:33:42.022131 by user wilsonr. 
+    #  Last update of this file: 2022-07-06 11:22:53.862362 by user wilsonr. 
     #  This code was re-written/re-formatted by Rob's python code:
     #   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-    #   which itself was last updated at UTC 2022-07-05T20:33:19.
+    #   which itself was last updated at UTC 2022-07-06T17:20:12.
     #
     #  The Spherical Harmonic g and h values used for this order 5 code are below: 
     #  

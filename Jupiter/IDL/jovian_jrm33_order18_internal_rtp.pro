@@ -18,10 +18,10 @@ FUNCTION jovian_jrm33_order18_internal_rtp, r_rj, colat_rads, elong_rads
   ; It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-05 14:33:41.941749 by user wilsonr. 
+  ;  Last update of this file: 2022-07-06 11:22:53.724304 by user wilsonr. 
   ;  This code was re-written/re-formatted by Rob's python code:
   ;   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-05T20:33:19.
+  ;   which itself was last updated at UTC 2022-07-06T17:20:12.
   ;
   ;  The Spherical Harmonic g and h values used for this order 18 code are below: 
   ;  
@@ -65,7 +65,7 @@ FUNCTION jovian_jrm33_order18_internal_rtp, r_rj, colat_rads, elong_rads
   ;                        h[17, 1] =     -209.2, h[17, 2] =      -15.8, h[17, 3] =       54.4, h[17, 4] =      308.7, h[17, 5] =      722.0, h[17, 6] =      233.3, h[17, 7] =      -82.1, h[17, 8] =      221.5, h[17, 9] =      488.6, h[17,10] =      206.3, h[17,11] =      176.7, h[17,12] =      353.4, h[17,13] =      204.8, h[17,14] =      -29.5, h[17,15] =       12.8, h[17,16] =      -89.6, h[17,17] =     -166.6, 
   ;                        h[18, 1] =      670.9, h[18, 2] =     -176.1, h[18, 3] =     -340.3, h[18, 4] =       37.0, h[18, 5] =      304.3, h[18, 6] =     -348.8, h[18, 7] =     -291.9, h[18, 8] =      165.6, h[18, 9] =      360.9, h[18,10] =     -119.0, h[18,11] =      100.1, h[18,12] =       26.9, h[18,13] =        1.0, h[18,14] =      -60.2, h[18,15] =       66.5, h[18,16] =      277.8, h[18,17] =       29.1, h[18,18] =       15.3, 
 
-  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no Matlab equivalent, just delete line in Matlab
+  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no MATLAB equivalent, just delete line in MATLAB
 
   ; Check inputs are same size.
   N_input = N_ELEMENTS(r_rj)

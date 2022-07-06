@@ -18,10 +18,10 @@ FUNCTION jovian_jrm33_order13_internal_rtp, r_rj, colat_rads, elong_rads
   ; It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-05 14:33:41.909675 by user wilsonr. 
+  ;  Last update of this file: 2022-07-06 11:22:53.674446 by user wilsonr. 
   ;  This code was re-written/re-formatted by Rob's python code:
   ;   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-05T20:33:19.
+  ;   which itself was last updated at UTC 2022-07-06T17:20:12.
   ;
   ;  The Spherical Harmonic g and h values used for this order 13 code are below: 
   ;  
@@ -55,7 +55,7 @@ FUNCTION jovian_jrm33_order13_internal_rtp, r_rj, colat_rads, elong_rads
   ;                        h[12, 1] =     4204.2, h[12, 2] =     2228.0, h[12, 3] =    -1901.1, h[12, 4] =    -1271.2, h[12, 5] =     1073.4, h[12, 6] =    -1111.9, h[12, 7] =      872.9, h[12, 8] =     -837.9, h[12, 9] =     -462.8, h[12,10] =      -22.0, h[12,11] =      110.3, h[12,12] =     -712.7, 
   ;                        h[13, 1] =     4125.6, h[13, 2] =      -44.0, h[13, 3] =     -455.4, h[13, 4] =     2160.6, h[13, 5] =      255.4, h[13, 6] =     1105.1, h[13, 7] =     1214.2, h[13, 8] =      196.1, h[13, 9] =     -207.7, h[13,10] =     1195.7, h[13,11] =      472.4, h[13,12] =      721.6, h[13,13] =       51.3, 
 
-  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no Matlab equivalent, just delete line in Matlab
+  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no MATLAB equivalent, just delete line in MATLAB
 
   ; Check inputs are same size.
   N_input = N_ELEMENTS(r_rj)

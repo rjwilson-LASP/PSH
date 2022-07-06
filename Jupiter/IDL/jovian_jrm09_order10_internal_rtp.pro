@@ -19,10 +19,10 @@ FUNCTION jovian_jrm09_order10_internal_rtp, r_rj, colat_rads, elong_rads
   ; Thanks to Masafumi Imai for providing code for his version of the JRM09 model, which was used to test and validate this code.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-05 14:33:41.880979 by user wilsonr. 
+  ;  Last update of this file: 2022-07-06 11:22:53.621476 by user wilsonr. 
   ;  This code was re-written/re-formatted by Rob's python code:
   ;   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-05T20:33:19.
+  ;   which itself was last updated at UTC 2022-07-06T17:20:12.
   ;
   ;  The Spherical Harmonic g and h values used for this order 10 code are below: 
   ;  
@@ -50,7 +50,7 @@ FUNCTION jovian_jrm09_order10_internal_rtp, r_rj, colat_rads, elong_rads
   ;                        h[ 9, 1] =    -8467.4, h[ 9, 2] =    -1383.8, h[ 9, 3] =     5697.7, h[ 9, 4] =    -2056.3, h[ 9, 5] =     3081.5, h[ 9, 6] =     -721.2, h[ 9, 7] =     1352.5, h[ 9, 8] =     -210.1, h[ 9, 9] =     1567.6, 
   ;                        h[10, 1] =    -4692.6, h[10, 2] =     4445.8, h[10, 3] =    -2378.6, h[10, 4] =    -2204.3, h[10, 5] =      164.1, h[10, 6] =    -1361.6, h[10, 7] =    -2031.5, h[10, 8] =     1411.8, h[10, 9] =     -714.3, h[10,10] =     1676.5, 
 
-  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no Matlab equivalent, just delete line in Matlab
+  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no MATLAB equivalent, just delete line in MATLAB
 
   ; Check inputs are same size.
   N_input = N_ELEMENTS(r_rj)

@@ -18,10 +18,10 @@ FUNCTION jovian_vipal_order05_internal_xyz, x_rj, y_rj, z_rj
   ; It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-05 14:33:42.032406 by user wilsonr. 
+  ;  Last update of this file: 2022-07-06 11:22:53.882156 by user wilsonr. 
   ;  This code was re-written/re-formatted by Rob's python code:
   ;   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-05T20:33:19.
+  ;   which itself was last updated at UTC 2022-07-06T17:20:12.
   ;
   ;  The Spherical Harmonic g and h values used for this order 5 code are below: 
   ;  
@@ -39,7 +39,7 @@ FUNCTION jovian_vipal_order05_internal_xyz, x_rj, y_rj, z_rj
   ;                        h[ 4, 1] =      32830, h[ 4, 2] =     -21310, h[ 4, 3] =      -6060, h[ 4, 4] =      -4860, 
   ;                        h[ 5, 1] =      20650, h[ 5, 2] =     -11670, h[ 5, 3] =      -2880, h[ 5, 4] =       -500, h[ 5, 5] =     -22790, 
 
-  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no Matlab equivalent, just delete line in Matlab
+  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no MATLAB equivalent, just delete line in MATLAB
 
   ; Check inputs are same size.
   N_input = N_ELEMENTS(x_rj)

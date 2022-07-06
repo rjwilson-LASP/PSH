@@ -18,10 +18,10 @@ FUNCTION jovian_isaac_order10_internal_xyz, x_rj, y_rj, z_rj
   ; It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-05 14:33:42.053946 by user wilsonr. 
+  ;  Last update of this file: 2022-07-06 11:22:53.924724 by user wilsonr. 
   ;  This code was re-written/re-formatted by Rob's python code:
   ;   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-05T20:33:19.
+  ;   which itself was last updated at UTC 2022-07-06T17:20:12.
   ;
   ;  The Spherical Harmonic g and h values used for this order 10 code are below: 
   ;  
@@ -49,7 +49,7 @@ FUNCTION jovian_isaac_order10_internal_xyz, x_rj, y_rj, z_rj
   ;                        h[ 9, 1] =     -290.0, h[ 9, 2] =     1890.0, h[ 9, 3] =     1850.0, h[ 9, 4] =      690.0, h[ 9, 5] =      320.0, h[ 9, 6] =     -430.0, h[ 9, 7] =      270.0, h[ 9, 8] =     -120.0, h[ 9, 9] =       27.0, 
   ;                        h[10, 1] =      230.0, h[10, 2] =     1720.0, h[10, 3] =     1250.0, h[10, 4] =     -110.0, h[10, 5] =     -110.0, h[10, 6] =      -15.0, h[10, 7] =      360.0, h[10, 8] =     -250.0, h[10, 9] =       80.0, h[10,10] =      -14.0, 
 
-  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no Matlab equivalent, just delete line in Matlab
+  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no MATLAB equivalent, just delete line in MATLAB
 
   ; Check inputs are same size.
   N_input = N_ELEMENTS(x_rj)

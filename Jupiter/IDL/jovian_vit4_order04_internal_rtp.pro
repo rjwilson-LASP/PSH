@@ -18,10 +18,10 @@ FUNCTION jovian_vit4_order04_internal_rtp, r_rj, colat_rads, elong_rads
   ; It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-05 14:33:42.001198 by user wilsonr. 
+  ;  Last update of this file: 2022-07-06 11:22:53.823033 by user wilsonr. 
   ;  This code was re-written/re-formatted by Rob's python code:
   ;   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-05T20:33:19.
+  ;   which itself was last updated at UTC 2022-07-06T17:20:12.
   ;
   ;  The Spherical Harmonic g and h values used for this order 4 code are below: 
   ;  
@@ -37,7 +37,7 @@ FUNCTION jovian_vit4_order04_internal_rtp, r_rj, colat_rads, elong_rads
   ;                        h[ 3, 1] =     -17187, h[ 3, 2] =      40667, h[ 3, 3] =     -35263, 
   ;                        h[ 4, 1] =      16088, h[ 4, 2] =      11807, h[ 4, 3] =       6195, h[ 4, 4] =      12641, 
 
-  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no Matlab equivalent, just delete line in Matlab
+  ON_ERROR, 2 ; Exit code if an error in main, don't stop in code - no MATLAB equivalent, just delete line in MATLAB
 
   ; Check inputs are same size.
   N_input = N_ELEMENTS(r_rj)
