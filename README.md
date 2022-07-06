@@ -27,11 +27,170 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 | JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2022 |
 | ISaAC |   10  | Jupiter | *Hess et al.*, 2017       | 71,492 km | *Hess et al.*, 2017 | |
 | VIPAL |    5  | Jupiter | *Hess et al.*, 2011       | 71,492 km | *Hess et al.*, 2011 | |
-| VIT4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km | *Connerney* 2007 | *Hess et al.*, 2011  |
-| VIP4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km | *Connerney* 2007 | *Hess et al.*, 2011 |
+| VIT4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^1] | *Connerney* 2007 | *Hess et al.*, 2011[^2]  |
+| VIP4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^1] | *Connerney* 2007 | *Hess et al.*, 2011 |
 | O6    |    3  | Jupiter | *Connerney* 1992          | 71,372 km |*Connerney* 1992 | *Connerney et al.*, 1998 |
+[^1]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
+[^2]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
 
 The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, hene we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
+
+## Examples
+### MATLAB
+```MATLAB
+function  Matlab_test
+ 
+% Spherical coordinate example for scalar at 10 Rj, Colatitude on equator
+% at East longitude of 38 degrees (converted to radians)
+Brtp_scalar = jovian_jrm33_order13_internal_rtp(10, pi/2, 38*pi/180);
+Brtp_scalar % print to screen
+ 
+% Spherical coordinate example.
+% 4 Quadrants all on the equator, with increasing r
+r = [8;9;10;11];
+t = pi/2 *[1;1;1;1];
+p = [0; pi/2; pi; 1.5*pi];
+Brtp = jovian_jrm33_order13_internal_rtp(r, t, p);
+Brtp % print to screen
+ 
+% Same 4 positions but now in Cartesian
+x = [  8;  0;-10;  0];
+y = [  0;  9;  0;-11];
+z = [  0;  0;  0;  0];
+Bxyz = jovian_jrm33_order13_internal_xyz(x, y, z);
+Bxyz % print to screen
+ 
+whos Brtp_scalar Brtp Bxyz
+```
+Gives the output:
+```
+Brtp_scalar =
+
+  -79.8398  399.4828  -53.4823
+
+Brtp =
+
+ -250.0396  779.3628  -48.0068
+   38.3079  551.8268  -92.0848
+  152.3795  421.1121   17.0471
+  -42.3894  313.6507   55.7882
+
+Bxyz =
+
+ -250.0396  -48.0068 -779.3628
+   92.0848   38.3079 -551.8268
+ -152.3795  -17.0471 -421.1121
+   55.7882   42.3894 -313.6507
+
+  Name             Size            Bytes  Class     Attributes
+
+  Brtp             4x3                96  double              
+  Brtp_scalar      1x3                24  double              
+  Bxyz             4x3                96  double              
+```
+
+### IDL
+```IDL
+PRO IDL_Test
+  ; Spherical coordinate example for scalar at 10 Rj, Colatitude on equator
+  ; at East longitude of 38 degrees (converted to radians)
+  Brtp_scalar = jovian_jrm33_order13_internal_rtp(10d, !DPI/2d, 38d*!DPI/180d)
+  PRINT,'Brtp_scalar = ‘
+  PRINT, Brtp_scalar
+
+  ; Spherical coordinate example.
+  ; 4 Quadrants all on the equator, with increasing r
+  r = [     8d,      9d,     10d,       11d]
+  t = [!DPI/2d, !DPI/2d, !DPI/2d, !DPI/2d  ]
+  p = [     0d, !DPI/2d, !DPI   , !DPI*1.5d]
+  Brtp = jovian_jrm33_order13_internal_rtp(r, t, p)
+  PRINT,'Brtp = ‘
+  PRINT, Brtp
+
+  ; Same 4 positions but now in Cartesian
+  x = [  8d,  0d,-10d,  0d]
+  y = [  0d,  9d,  0d,-11d]
+  z = [  0d,  0d,  0d,  0d]
+  Bxyz = jovian_jrm33_order13_internal_xyz(x, y, z)
+  PRINT,'Bxyz = ‘
+  PRINT, Bxyz
+
+  HELP, Brtp_scalar, Brtp, Bxyz
+END
+```
+Gives the output:
+```
+Brtp_scalar = 
+      -79.839826
+       399.48279
+      -53.482325
+Brtp = 
+      -250.03964       38.307890       152.37954      -42.389403
+       779.36280       551.82685       421.11209       313.65069
+      -48.006775      -92.084823       17.047116       55.788200
+Bxyz = 
+      -250.03964       92.084823      -152.37954       55.788200
+      -48.006775       38.307890      -17.047116       42.389403
+      -779.36280      -551.82685      -421.11209      -313.65069
+BRTP_SCALAR     DOUBLE    = Array[1, 3]
+BRTP            DOUBLE    = Array[4, 3]
+BXYZ            DOUBLE    = Array[4, 3]
+```
+
+### Python 3
+```Python
+import numpy as np
+import jovian_jrm33_order13_internal_rtp as jrm33o13_rtp
+import jovian_jrm33_order13_internal_xyz as jrm33o13_xyz
+
+# Spherical coordinate example for scalar at 10 Rj, Colatitude on equator
+# at East longitude of 38 degrees (converted to radians)
+Brtp_scalar = jrm33o13_rtp.jovian_jrm33_order13_internal_rtp(10, np.pi/2, 38*np.pi/180);
+print('Brtp_scalar = ')
+print(Brtp_scalar)
+
+# Spherical coordinate example.
+# 4 Quadrants all on the equator, with increasing r
+# Can be numpy arrays or not, if you use pi, should be
+r =          [      8,       9,      10,        11]
+t = np.array([np.pi/2, np.pi/2, np.pi/2, np.pi/2  ])
+p = np.array([      0, np.pi/2, np.pi  , np.pi*1.5])
+Brtp = jrm33o13_rtp.jovian_jrm33_order13_internal_rtp(r, t, p);
+print('Brtp = ')
+print(Brtp)
+
+# Same 4 positions but now in Cartesian
+# Can be numpy arrays, but since just numbers here, does not have to be
+x = [  8,  0,-10,  0]
+y = [  0,  9,  0,-11]
+z = [  0,  0,  0,  0]
+Bxyz = jrm33o13_xyz.jovian_jrm33_order13_internal_xyz(x, y, z);
+print('Bxyz = ')
+print(Bxyz)
+
+print('Shape of Brtp_scalar: ', Brtp_scalar.shape)
+print('Shape of Brtp       : ', Brtp.shape)
+print('Shape of Bxyz       : ', Bxyz.shape)
+```
+
+Gives the output:
+```
+Brtp_scalar = 
+[-79.8398262  399.48279169 -53.48232536]
+Brtp = 
+[[-250.03964154  779.36280353  -48.0067748 ]
+ [  38.30789003  551.82684557  -92.08482301]
+ [ 152.37953988  421.11209401   17.04711562]
+ [ -42.38940341  313.65069342   55.78819978]]
+Bxyz = 
+[[-250.03964154  -48.0067748  -779.36280353]
+ [  92.08482301   38.30789003 -551.82684557]
+ [-152.37953988  -17.04711562 -421.11209401]
+ [  55.78819978   42.38940341 -313.65069342]]
+Shape of Brtp_scalar:  (3,)
+Shape of Brtp       :  (4, 3)
+Shape of Bxyz       :  (4, 3)
+```
 
 ## References
 
