@@ -199,7 +199,6 @@ Shape of Brtp_scalar:  (1, 3)
 Shape of Brtp       :  (4, 3)
 Shape of Bxyz       :  (4, 3)
 ```
-Note: for scalar inputs, the Python output is size 3, not size 1 x 3 as with the other codes.
 
 ## Solution #2
 There is sister community code that will do the same models here, and give the same results, over at [https://github.com/mattkjames7/JupiterMag](https://github.com/mattkjames7/JupiterMag).  This is a Python 3 package that requires a simple install, and has more flexibility than this code, e.g. you could have Cartesian inputs, but outputs in Spherical.  It also includes code for a current sheet, and field line tracing.
