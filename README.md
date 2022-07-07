@@ -21,7 +21,8 @@ These run quickly, but the higher the order, the longer it takes simply due to m
 
 ## Spherical Harmonic Models Included
 
-We recommend using JRM33 order 13, but here is the list of existing models.  All these were developed in a right-handed System III (1965) system (some earlier models had used System III (1957)), but assumed different values for what 1 R<sub>J</sub> was.
+We recommend using JRM33 order 13, but here is the list of existing models.  All these were developed in a right-handed System III (1965) system (some earlier models had used System III (1957)[^1]), but assumed different values for what 1 R<sub>J</sub> was.
+[^1]: The SHA model was originally calculated in the System III (1957) frame, but *Connerney* 2007 converted the *g* and *h* coefficients in to System III (1965), however G<sub>3</sub><sup>0</sup> is listed as 11,300 nT, but we believe this has a sign typo and should be -11,300 nT.  The R<sub>J</sub> value is not specified, but we believe they used 71,398 km.
 
 | Model | Order | Planet  | Original Model Reference | R<sub>J</sub> used in original work | Reference used for *g* and *h* values | Other references for *g* and *h* values |
 | ----- | ----- | ------- |----------------------- | ---- | ---------------------- | ---------------------- |
@@ -30,11 +31,11 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 | JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2022 |
 | ISaAC |   10  | Jupiter | *Hess et al.*, 2017       | 71,492 km | *Hess et al.*, 2017 | |
 | VIPAL |    5  | Jupiter | *Hess et al.*, 2011       | 71,492 km | *Hess et al.*, 2011 | |
-| VIT4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^1] | *Connerney* 2007 | *Hess et al.*, 2011[^2]  |
-| VIP4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^1] | *Connerney* 2007 | *Hess et al.*, 2011 |
+| VIT4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^2] | *Connerney* 2007 | *Hess et al.*, 2011[^3]  |
+| VIP4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^2] | *Connerney* 2007 | *Hess et al.*, 2011 |
 | O6    |    3  | Jupiter | *Connerney* 1992          | 71,372 km |*Connerney* 1992 | *Connerney et al.*, 1998 |
-[^1]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
-[^2]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
+[^2]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 coefficients (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
+[^3]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
 
 The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, hene we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
 
