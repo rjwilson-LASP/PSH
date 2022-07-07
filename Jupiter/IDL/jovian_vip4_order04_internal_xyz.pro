@@ -18,10 +18,10 @@ FUNCTION jovian_vip4_order04_internal_xyz, x_rj, y_rj, z_rj
   ; It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-06 11:22:53.800320 by user wilsonr. 
+  ;  Last update of this file: 2022-07-07 11:50:27.250386 by user wilsonr. 
   ;  This code was re-written/re-formatted by Rob's python code:
-  ;   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-06T17:20:12.
+  ;   /Users/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
+  ;   which itself was last updated at UTC 2022-07-07T17:50:22.
   ;
   ;  The Spherical Harmonic g and h values used for this order 4 code are below: 
   ;  

@@ -20,10 +20,10 @@ def jovian_o6_order03_internal_rtp( r_rj, colat_rads, elong_rads):
     # It is based on a routine originally written by K. Khurana, translated into IDL by Marissa Vogt in 2009.
     #
     # Version Info:
-    #  Last update of this file: 2022-07-06 11:22:53.944236 by user wilsonr. 
+    #  Last update of this file: 2022-07-07 11:50:27.274900 by user wilsonr. 
     #  This code was re-written/re-formatted by Rob's python code:
-    #   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-    #   which itself was last updated at UTC 2022-07-06T17:20:12.
+    #   /Users/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
+    #   which itself was last updated at UTC 2022-07-07T17:50:22.
     #
     #  The Spherical Harmonic g and h values used for this order 3 code are below: 
     #  
@@ -293,4 +293,7 @@ def jovian_o6_order03_internal_rtp( r_rj, colat_rads, elong_rads):
         if (len(ind) != 0):
             bf[ind] =  bbf[ind]/sin_theta[ind]
     
-    return np.transpose(np.array([bbr,bbt,bf]))
+    if scalar_input:
+        return             np.array([[bbr,bbt,bf]])
+    else:
+        return np.transpose(np.array([bbr,bbt,bf]))

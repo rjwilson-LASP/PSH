@@ -21,10 +21,10 @@ def jovian_jrm09_order10_internal_xyz( x_rj, y_rj, z_rj):
     # Thanks to Masafumi Imai for providing code for his version of the JRM09 model, which was used to test and validate this code.
     #
     # Version Info:
-    #  Last update of this file: 2022-07-06 11:22:53.648644 by user wilsonr. 
+    #  Last update of this file: 2022-07-07 11:50:27.224021 by user wilsonr. 
     #  This code was re-written/re-formatted by Rob's python code:
-    #   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-    #   which itself was last updated at UTC 2022-07-06T17:20:12.
+    #   /Users/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
+    #   which itself was last updated at UTC 2022-07-07T17:50:22.
     #
     #  The Spherical Harmonic g and h values used for this order 10 code are below: 
     #  
@@ -392,13 +392,19 @@ def jovian_jrm09_order10_internal_xyz( x_rj, y_rj, z_rj):
     # ######################################################################
     # End of RTP code.
     # ######################################################################
-    # Brtp = np.transpose(np.array([bbr , bbt , bf ]))
+    # if scalar_input:
+    #     return             np.array([[bbr,bbt,bf]])
+    # else:
+    #     return np.transpose(np.array([bbr,bbt,bf]))
     
     # Convert to cartesian coordinates
     # Each line is one component, Bx, By then Bz
-    Bxyz = np.transpose(np.array([ \
+    Bxyz = np.array([ \
         bbr *sin_theta *cos_phi + bbt *cos_theta *cos_phi - bf *sin_phi , \
         bbr *sin_theta *sin_phi + bbt *cos_theta *sin_phi + bf *cos_phi , \
         bbr *cos_theta          - bbt *sin_theta                          \
-        ])) # size n x 3
-    return  Bxyz
+        ]) # size 3 x n, or just size 3 if scalar
+    if scalar_input:
+        return    np.array([Bxyz]) # size 1 x 3
+    else:
+        return np.transpose(Bxyz)  # size n x 3

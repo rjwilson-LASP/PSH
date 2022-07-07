@@ -1324,7 +1324,12 @@ for model in (models_to_do): # loop for different models?
 #            IDLpro.extend(["  %s RETURN,Brtp"%standards['comment_IDLpro']])
             IDLpro.extend(["  RETURN,[[bbr],[bbt],[bf]]"])
             MATLAB.extend([  "Brtp = [ bbr , bbt , bf ];"])
-            PYTHON.extend(["return np.transpose(np.array([bbr,bbt,bf]))"])
+            #PYTHON.extend(["return np.transpose(np.array([bbr,bbt,bf]))"])
+            # Above output returned a size 3 for scalar, not size 1 by 3, so fix
+            PYTHON.extend(["if scalar_input:"])
+            PYTHON.extend(["    return             np.array([[bbr,bbt,bf]])"])
+            PYTHON.extend(["else:"])
+            PYTHON.extend(["    return np.transpose(np.array([bbr,bbt,bf]))"])
 
         elif (coord == 'xyz'):
 
@@ -1341,7 +1346,12 @@ for model in (models_to_do): # loop for different models?
 
             IDLpro.extend(["  %s Brtp = [[bbr],[bbt],[bf]]"%(  standards['comment_IDLpro'])])
             MATLAB.extend([  "%s Brtp = [ bbr , bbt , bf ];"%( standards['comment_Matlab'])])
-            PYTHON.extend([  "%s Brtp = np.transpose(np.array([bbr , bbt , bf ]))"%(standards['comment_Python'])])
+            #PYTHON.extend([  "%s Brtp = np.transpose(np.array([bbr , bbt , bf ]))"%(standards['comment_Python'])])
+            PYTHON.extend(["%s if scalar_input:"%(standards['comment_Python'])])
+            PYTHON.extend(["%s     return             np.array([[bbr,bbt,bf]])"%(standards['comment_Python'])])
+            PYTHON.extend(["%s else:"%(standards['comment_Python'])])
+            PYTHON.extend(["%s     return np.transpose(np.array([bbr,bbt,bf]))"%(standards['comment_Python'])])
+
 
             # Add Blank Line
             (IDLpro,MATLAB,PYTHON) = add_blank_line(IDLpro,MATLAB,PYTHON)
@@ -1354,7 +1364,9 @@ for model in (models_to_do): # loop for different models?
 
             IDLpro.extend(["  Bxyz = [ %s"%standards['IDLpro_contline']])
             MATLAB.extend([  "Bxyz = [ %s"%standards['Matlab_contline']])
-            PYTHON.extend([  "Bxyz = np.transpose(np.array([ %s"%standards['Python_contline']])
+            #PYTHON.extend([  "Bxyz = np.transpose(np.array([ %s"%standards['Python_contline']])
+            # Above output returned a size 3 for scalar, not size 1 by 3, so fix
+            PYTHON.extend([  "Bxyz = np.array([ %s"%standards['Python_contline']])
 
             IDLpro.extend(["    [bbr*sin_theta *cos_phi + bbt *cos_theta *cos_phi - bf *sin_phi], %s %s Bx"%(standards['IDLpro_contline'],standards['comment_IDLpro'])])
             MATLAB.extend(["    bbr.*sin_theta.*cos_phi + bbt.*cos_theta.*cos_phi - bf.*sin_phi   %s %s Bx"%(standards['Matlab_contline'],standards['comment_Matlab'])])
@@ -1370,10 +1382,17 @@ for model in (models_to_do): # loop for different models?
 
             IDLpro.extend(["    ]   %s size n x 3"%standards['comment_IDLpro']])
             MATLAB.extend(["    ];  %s size n x 3"%standards['comment_Matlab']])
-            PYTHON.extend(["    ])) %s size n x 3"%standards['comment_Python']])
+            #PYTHON.extend(["    ])) %s size n x 3"%standards['comment_Python']])
+            PYTHON.extend(["    ]) %s size 3 x n, or just size 3 if scalar"%standards['comment_Python']]) # since no transpose now
 
             IDLpro.extend(["  RETURN, Bxyz"])
-            PYTHON.extend([  "return  Bxyz"])
+            #PYTHON.extend([  "return  Bxyz"])
+            # Above output returned a size 3 for scalar, not size 1 by 3, so fix
+            PYTHON.extend([  "if scalar_input:"])
+            PYTHON.extend([  "    return    np.array([Bxyz]) %s size 1 x 3"%standards['comment_Python']])
+            PYTHON.extend([  "else:"])
+            PYTHON.extend([  "    return np.transpose(Bxyz)  %s size n x 3"%standards['comment_Python']])
+
             # Matlab doesn't need a return
 
 
