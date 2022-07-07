@@ -1,7 +1,9 @@
 # PSH
 ## Planetary Spherical Harmonics community code
 
-These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in **MATLAB**, **IDL** and **Python 3**.  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
+*Initial Problem*: There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965) and later papers converted them to equivalent System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different Users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, and we suspect many forgot to adjust older models for their different R<sub>J</sub>).
+
+*Solution*: These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in **MATLAB**, **IDL** and **Python 3**.  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
 
 Just download the particular file you want (language, particular model, and if Cartesian (xyz) or Spherical (rtp)) to your local directory, and run.  No 'install' required and each code is independent.  They can be run with scalar inputs, or with 1D vector inputs.  For MATLAB, the 1D vector must be a column vector not a row vector (while the code could check and transpose if neccessary, that would slow it down.) For Python, you must have NumPy installed and the inputs can be a list or NumPy array.
 
