@@ -45,9 +45,9 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 
 | Model | Order | Planet  | Original Model Reference | R<sub>J</sub> used in original work | Reference used for *g* and *h* values | Other references for *g* and *h* values |
 | ----- | ----- | ------- |----------------------- | ---- | ---------------------- | ---------------------- |
-| JRM33 |   18  | Jupiter | *Connerney et al.*, 2022  | 71,492 km | *Connerney et al.*, 2022 | *Connerney*, 2017[^4] |
-| **JRM33** |  **13**   | **Jupiter** | ***Connerney et al., 2022*** | 71,492 km | ***Connerney et al.***, 2022 | *Connerney*, 2017[^4] |
-| JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2017[^4] |
+| JRM33 |   18  | Jupiter | *Connerney et al.*, 2022  | 71,492 km | *Connerney et al.*, 2022 | *Connerney*, 20120^4] |
+| **JRM33** |  **13**   | **Jupiter** | ***Connerney et al., 2022*** | 71,492 km | ***Connerney et al.***, 2022 | *Connerney*, 2020[^4] |
+| JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2020[^4] |
 | ISaAC |   10  | Jupiter | *Hess et al.*, 2017       | 71,492 km | *Hess et al.*, 2017 | |
 | VIPAL |    5  | Jupiter | *Hess et al.*, 2011       | 71,492 km | *Hess et al.*, 2011 | |
 | VIT4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^2] | *Connerney* 2007 | *Hess et al.*, 2011[^3]  |
@@ -238,8 +238,8 @@ For below we test both the spherical (RTP) codes and Cartesian (xyz), when runni
 - Connerney, J. E. P. (1992). Doing more with Jupiter's magnetic field. In *Planetary radio emissions iii* (p. 13-33).  [*No doi but try here for chapter.*](https://ui.adsabs.harvard.edu/abs/1992pre3.conf...13C/abstract) Book doi: [10.1553/0x0015ce1d](https://doi.org/10.1553/0x0015ce1d)
 - Connerney, J. E. P., Acuna, M. H., Ness, N. F.,  Satoh, T. (1998). New models of Jupiter's magnetic field constrained by the Io flux tube footprint. *J. Geophys. Res.*, 103 (A6), 11929-11940. doi: [10.1029/97JA03726](https://doi.org/10.1029/97JA03726)
 - Connerney, J. E. P. (2007). Planetary Magnetism. In G. Schubert (Ed.), *Planets and moons* (Vol. 10, p. 243-280). doi: [10.1016/B978-044452748-6.00159-0](https://doi.org/10.1016/B978-044452748-6.00159-0)
-- Connerney, J.E.P. (2017), Juno MAG CALIBRATED DATA J V1.0, JNO-J-3-FGM-CAL-V1.0, NASA Planetary Data System, doi: [10.17189/1519711](https://doi.org/10.17189/1519711)
 - Connerney, J. E. P., et al. (2018). A New Model of Jupiter's Magnetic Field From Juno's First Nine Orbits. *Geophys. Res. Lett.*, 45 (6), 2590-2596. doi: [10.1002/2018GL077312](https://doi.org/10.1002/2018GL077312)
+- Connerney, J.E.P. (2020), Juno MAG CALIBRATED DATA J V1.0, JNO-J-3-FGM-CAL-V1.0, NASA Planetary Data System, doi: [10.17189/1519711](https://doi.org/10.17189/1519711)
 - Connerney, J. E. P., et al. (2022). A New Model of Jupiter's Magnetic Field at the Completion of Juno's Prime Mission. *Journal of Geophysical Research (Planets)*, 127 (2), e07055. doi: [10.1029/2021JE007055](https://doi.org/10.1029/2021JE007055)
 - Hess, S. L. G., Bonfond, B., Zarka, P., Grodent, D. (2011). Model of the Jovian magnetic field topology constrained by the Io auroral emissions. *Journal of Geophysical Research (Space Physics)*, 116 (A5), A05217. doi: [10.1029/2010JA016262](https://doi.org/10.1029/2010JA016262)
 - Hess, S. L. G., Bonfond, B., Bagenal, F., Lamy, L. (2017). A model of the Jovian internal field derived from in-situ and auroral constraints. In G. Fischer, G. Mann, M. Panchenko, & P. Zarka (Eds.), *Planetary radio emissions viii* (p. 157-167). doi: [10.1553/PRE8s157](https://doi.org/10.1553/PRE8s157)
