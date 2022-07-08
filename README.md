@@ -45,7 +45,7 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 
 | Model | Order | Planet  | Original Model Reference | R<sub>J</sub> used in original work | Reference used for *g* and *h* values | Other references for *g* and *h* values |
 | ----- | ----- | ------- |----------------------- | ---- | ---------------------- | ---------------------- |
-| JRM33 |   18  | Jupiter | *Connerney et al.*, 2022  | 71,492 km | *Connerney et al.*, 2022 | *Connerney*, 20120^4] |
+| JRM33 |   18  | Jupiter | *Connerney et al.*, 2022  | 71,492 km | *Connerney et al.*, 2022 | *Connerney*, 2020^4] |
 | **JRM33** |  **13**   | **Jupiter** | ***Connerney et al., 2022*** | 71,492 km | ***Connerney et al.***, 2022 | *Connerney*, 2020[^4] |
 | JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2020[^4] |
 | ISaAC |   10  | Jupiter | *Hess et al.*, 2017       | 71,492 km | *Hess et al.*, 2017 | |
