@@ -235,7 +235,7 @@ For below we test both the spherical (RTP) codes and Cartesian (xyz), when runni
 ## References
 
 - Connerney, J. E. P., Acuna, M. H., Ness, N. F. (1982). Voyager 1 assessment of Jupiter's planetary magnetic field. *J. Geophys. Res.*, 87 (A5), 3623-3623. doi: [10.1029/JA087iA05p03623](https://doi.org/10.1029/JA087iA05p03623)
-- Connerney, J. E. P. (1992). Doing more with Jupiter's magnetic field. In *Planetary radio emissions iii* (p. 13-33).  [*No doi but try here.*](https://ui.adsabs.harvard.edu/abs/1992pre3.conf...13C/abstract)
+- Connerney, J. E. P. (1992). Doing more with Jupiter's magnetic field. In *Planetary radio emissions iii* (p. 13-33).  [*No doi but try here for chapter.*](https://ui.adsabs.harvard.edu/abs/1992pre3.conf...13C/abstract) Book doi: [10.1553/0x0015ce1d](https://doi.org/10.1553/0x0015ce1d)
 - Connerney, J. E. P., Acuna, M. H., Ness, N. F.,  Satoh, T. (1998). New models of Jupiter's magnetic field constrained by the Io flux tube footprint. *J. Geophys. Res.*, 103 (A6), 11929-11940. doi: [10.1029/97JA03726](https://doi.org/10.1029/97JA03726)
 - Connerney, J. E. P. (2007). Planetary Magnetism. In G. Schubert (Ed.), *Planets and moons* (Vol. 10, p. 243-280). doi: [10.1016/B978-044452748-6.00159-0](https://doi.org/10.1016/B978-044452748-6.00159-0)
 - Connerney, J.E.P. (2017), Juno MAG CALIBRATED DATA J V1.0, JNO-J-3-FGM-CAL-V1.0, NASA Planetary Data System, doi: [10.17189/1519711](https://doi.org/10.17189/1519711)
