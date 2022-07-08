@@ -16,6 +16,7 @@
   - [Python 3](README.md#python-3)
 - [Solution #2: JupiterMag](README.md#solution-2-jupitermag)
 - [Speed Tests](README.md#speed-tests)
+- [See Also](README.md#see-also)
 - [References](README.md#references)
 
 
@@ -231,6 +232,8 @@ For below we test both the spherical (RTP) codes and Cartesian (xyz), when runni
 
 ![speedtest](https://user-images.githubusercontent.com/91491246/178030181-12f68efe-b109-4a75-9d55-bcc26be2ce84.png)
 
+## See Also
+Aside from [https://github.com/mattkjames7/JupiterMag](https://github.com/mattkjames7/JupiterMag), there are also current sheet models available for download.  Rather than list them here, see the summary list at [https://lasp.colorado.edu/home/mop/missions/juno/community-code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
 
 ## References
 
