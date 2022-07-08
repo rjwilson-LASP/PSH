@@ -46,8 +46,8 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 | Model | Order | Planet  | Original Model Reference | R<sub>J</sub> used in original work | Reference used for *g* and *h* values | Other references for *g* and *h* values |
 | ----- | ----- | ------- |----------------------- | ---- | ---------------------- | ---------------------- |
 | JRM33 |   18  | Jupiter | *Connerney et al.*, 2022  | 71,492 km | *Connerney et al.*, 2022 | *Connerney*, 2022 |
-| **JRM33** |  **13**   | **Jupiter** | ***Connerney et al., 2022*** | 71,492 km | ***Connerney et al.***, 2022 | *Connerney*, 2022 |
-| JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2022 |
+| **JRM33** |  **13**   | **Jupiter** | ***Connerney et al., 2022*** | 71,492 km | ***Connerney et al.***, 2022 | *Connerney*, 2017[^4] |
+| JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2017[^4] |
 | ISaAC |   10  | Jupiter | *Hess et al.*, 2017       | 71,492 km | *Hess et al.*, 2017 | |
 | VIPAL |    5  | Jupiter | *Hess et al.*, 2011       | 71,492 km | *Hess et al.*, 2011 | |
 | VIT4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^2] | *Connerney* 2007 | *Hess et al.*, 2011[^3]  |
@@ -55,6 +55,7 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 | O6    |    3  | Jupiter | *Connerney* 1992          | 71,372 km |*Connerney* 1992 | *Connerney et al.*, 1998 |
 [^2]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 coefficients (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
 [^3]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
+[^4]: The PDS archive is cited as year 2017.  The models were added to this dataset in later years, but same doi for the whole dataset.
 
 The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, hene we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
 
@@ -237,8 +238,8 @@ For below we test both the spherical (RTP) codes and Cartesian (xyz), when runni
 - Connerney, J. E. P. (1992). Doing more with Jupiter's magnetic field. In *Planetary radio emissions iii* (p. 13-33).
 - Connerney, J. E. P., Acuna, M. H., Ness, N. F.,  Satoh, T. (1998). New models of Jupiter's magnetic field constrained by the Io flux tube footprint. *J. Geophys. Res.*, 103 (A6), 11929-11940. doi: [10.1029/97JA03726](https://doi.org/10.1029/97JA03726)
 - Connerney, J. E. P. (2007). Planetary Magnetism. In G. Schubert (Ed.), *Planets and moons* (Vol. 10, p. 243-280). doi: [10.1016/B978-044452748-6.00159-0](https://doi.org/10.1016/B978-044452748-6.00159-0)
+- Connerney, J.E.P. (2017), Juno MAG CALIBRATED DATA J V1.0, JNO-J-3-FGM-CAL-V1.0, NASA Planetary Data System, doi: [10.17189/1519711](https://doi.org/10.17189/1519711)
 - Connerney, J. E. P., et al. (2018). A New Model of Jupiter's Magnetic Field From Juno's First Nine Orbits. *Geophys. Res. Lett.*, 45 (6), 2590-2596. doi: [10.1002/2018GL077312](https://doi.org/10.1002/2018GL077312)
 - Connerney, J. E. P., et al. (2022). A New Model of Jupiter's Magnetic Field at the Completion of Juno's Prime Mission. *Journal of Geophysical Research (Planets)*, 127 (2), e07055. doi: [10.1029/2021JE007055](https://doi.org/10.1029/2021JE007055)
-- Connerney, J. (2022). Juno magnetometer jupiter archive. NASA Planetary Data System. Retrieved from https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=JNO-J-3-FGM-CAL-V1.0 doi: [10.17189/1519711](https://doi.org/10.17189/1519711)
 - Hess, S. L. G., Bonfond, B., Zarka, P., Grodent, D. (2011). Model of the Jovian magnetic field topology constrained by the Io auroral emissions. *Journal of Geophysical Research (Space Physics)*, 116 (A5), A05217. doi: [10.1029/2010JA016262](https://doi.org/10.1029/2010JA016262)
 - Hess, S. L. G., Bonfond, B., Bagenal, F., Lamy, L. (2017). A model of the Jovian internal field derived from in-situ and auroral constraints. In G. Fischer, G. Mann, M. Panchenko, & P. Zarka (Eds.), *Planetary radio emissions viii* (p. 157-167). doi: [10.1553/PRE8s157](https://doi.org/10.1553/PRE8s157)
