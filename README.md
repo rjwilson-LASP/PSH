@@ -1,7 +1,11 @@
 # PSH: Planetary Spherical Harmonics community code
 
+**Authors**:  M. Brennan, M.K. James, G. Provan, M.F. Vogt and R.J. Wilson
+
+**Thanks to**: F. Bagenal for the original idea. Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verifcations!
+
 ## Initial Problem
-There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, to what precision their $g$ and $h$ values were, and we suspect users may have forgotten to adjust older models for their different R<sub>J</sub>.  The aim here is to have a standard set of efficient codes, that people can just use.
+There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, to what precision their $g$ and $h$ values were, and we suspect users may have forgotten to adjust older models for their different R<sub>J</sub>.  The aim here is to have a standard set of efficient codes, that people can just use and cite.
 
 ## Solution #1
 These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in **MATLAB**, **IDL** and **Python 3**.  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
@@ -200,10 +204,17 @@ Shape of Brtp       :  (4, 3)
 Shape of Bxyz       :  (4, 3)
 ```
 
-## Solution #2
+## Solution #2: JupiterMag
 There is sister community code that will do the same models here, and give the same results, over at [https://github.com/mattkjames7/JupiterMag](https://github.com/mattkjames7/JupiterMag).  This is a Python 3 package that requires a simple install, and has more flexibility than this code, e.g. you could have Cartesian inputs, but outputs in Spherical.  It also includes code for a current sheet, and field line tracing.
 
 We have tested the JupiterMag codes against the codes here, and for same inputs we still get the same outputs to within the same rounding errors.
+
+## Speed Tests
+The following speed tests were done on a Mac in 2022, but speed depends on your physical computer, your operating system, what else you're running and even which version of IDL or Matlab you have.  e.g. IDL 8.4 took 17s to run our code in a test, but the same test on IDL 8.8 took 14s.
+For below we test both the spherical (RTP) codes and Cartesian (xyz), when running 75641 test positions once as a vector, or as 75641 scalars in a FOR loop.  We show comparisions of the 3 langauge codes in this respository, and also the sister [*JupiterMag* code](README.md#solution-2-jupitermag).
+
+![speedtest](https://user-images.githubusercontent.com/91491246/178030181-12f68efe-b109-4a75-9d55-bcc26be2ce84.png)
+
 
 ## References
 
