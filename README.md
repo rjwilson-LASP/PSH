@@ -55,7 +55,7 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 | O6    |    3  | Jupiter | *Connerney* 1992          | 71,372 km |*Connerney* 1992 | *Connerney et al.*, 1998 |
 [^2]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 coefficients (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
 [^3]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
-[^4]: The PDS archive is cited as year 2017.  The models were added to this dataset in later years, but same doi for the whole dataset.
+[^4]: The PDS archive is cited as year 2020 here, but was originally from 2017.  The models were added to this dataset in later years, but same doi for the whole dataset, hene the year may be later than that of the original papers.
 
 The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, hene we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
 
