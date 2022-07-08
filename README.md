@@ -4,7 +4,7 @@
 
 **Citation**: *TBD*
 
-**Thanks to**: F. Bagenal for the original idea. Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verifcations!
+**Thanks to**: F. Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verifcations!
 
 **Table of Contents**:
 - [Initial Problem](README.md#initial-problem)
@@ -20,7 +20,7 @@
 
 
 ## Initial Problem
-There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, to what precision their $g$ and $h$ values were, and we suspect users may have forgotten to adjust older models for their different R<sub>J</sub>.  The aim here is to have a standard set of efficient codes, that people can just use and cite.
+There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, to what precision their $g$ and $h$ values were, and we suspect users may have forgotten to adjust older models for their different R<sub>J</sub>.  The aim here is to have a standard set of efficient codes, that people can just use and cite.  
 
 ## Solution
 These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in [**MATLAB**](https://www.mathworks.com/products/matlab.html), [**IDL**](https://www.l3harrisgeospatial.com/Software-Technology/IDL) and [**Python 3**](https://www.python.org/).  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
@@ -45,7 +45,7 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 
 | Model | Order | Planet  | Original Model Reference | R<sub>J</sub> used in original work | Reference used for *g* and *h* values | Other references for *g* and *h* values |
 | ----- | ----- | ------- |----------------------- | ---- | ---------------------- | ---------------------- |
-| JRM33 |   18  | Jupiter | *Connerney et al.*, 2022  | 71,492 km | *Connerney et al.*, 2022 | *Connerney*, 2022 |
+| JRM33 |   18  | Jupiter | *Connerney et al.*, 2022  | 71,492 km | *Connerney et al.*, 2022 | *Connerney*, 2017[^4] |
 | **JRM33** |  **13**   | **Jupiter** | ***Connerney et al., 2022*** | 71,492 km | ***Connerney et al.***, 2022 | *Connerney*, 2017[^4] |
 | JRM09 |   10  | Jupiter | *Connerney et al.*, 2018 | 71,492 km | *Connerney et al.*, 2018 | *Connerney*, 2017[^4] |
 | ISaAC |   10  | Jupiter | *Hess et al.*, 2017       | 71,492 km | *Hess et al.*, 2017 | |
@@ -235,7 +235,7 @@ For below we test both the spherical (RTP) codes and Cartesian (xyz), when runni
 ## References
 
 - Connerney, J. E. P., Acuna, M. H., Ness, N. F. (1982). Voyager 1 assessment of Jupiter's planetary magnetic field. *J. Geophys. Res.*, 87 (A5), 3623-3623. doi: [10.1029/JA087iA05p03623](https://doi.org/10.1029/JA087iA05p03623)
-- Connerney, J. E. P. (1992). Doing more with Jupiter's magnetic field. In *Planetary radio emissions iii* (p. 13-33).  [No doi but try here](https://ui.adsabs.harvard.edu/abs/1992pre3.conf...13C/abstract)
+- Connerney, J. E. P. (1992). Doing more with Jupiter's magnetic field. In *Planetary radio emissions iii* (p. 13-33).  [*No doi but try here.*](https://ui.adsabs.harvard.edu/abs/1992pre3.conf...13C/abstract)
 - Connerney, J. E. P., Acuna, M. H., Ness, N. F.,  Satoh, T. (1998). New models of Jupiter's magnetic field constrained by the Io flux tube footprint. *J. Geophys. Res.*, 103 (A6), 11929-11940. doi: [10.1029/97JA03726](https://doi.org/10.1029/97JA03726)
 - Connerney, J. E. P. (2007). Planetary Magnetism. In G. Schubert (Ed.), *Planets and moons* (Vol. 10, p. 243-280). doi: [10.1016/B978-044452748-6.00159-0](https://doi.org/10.1016/B978-044452748-6.00159-0)
 - Connerney, J.E.P. (2017), Juno MAG CALIBRATED DATA J V1.0, JNO-J-3-FGM-CAL-V1.0, NASA Planetary Data System, doi: [10.17189/1519711](https://doi.org/10.17189/1519711)
