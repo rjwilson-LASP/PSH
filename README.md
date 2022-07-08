@@ -2,12 +2,27 @@
 
 **Authors**:  M. Brennan, M.K. James, G. Provan, M.F. Vogt and R.J. Wilson
 
+**Citation**: *TBD*
+
 **Thanks to**: F. Bagenal for the original idea. Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verifcations!
+
+**Table of Contents**:
+- [Initial Problem](README.md#initial-problem)
+- [Solution](README.md#solution)
+- [Spherical Harmonic Models Included](README.md#spherical-harmonic-models-included)
+- [Examples](README.md#examples)
+  - [MATLAB](README.md#matlab)
+  - [IDL](README.md#idl)
+  - [Python 3](README.md#python-3)
+- [Solution #2: JupiterMag](README.md#solution-2-jupitermag)
+- [Speed Test](README.md#speed-test)
+- [References](README.md#references)
+
 
 ## Initial Problem
 There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, to what precision their $g$ and $h$ values were, and we suspect users may have forgotten to adjust older models for their different R<sub>J</sub>.  The aim here is to have a standard set of efficient codes, that people can just use and cite.
 
-## Solution #1
+## Solution
 These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in **MATLAB**, **IDL** and **Python 3**.  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
 
 Just download the particular file you want (language, particular model, and if Cartesian (xyz) or Spherical (rtp)) to your local directory, and run.  No 'install' required and each code is independent.  They can be run with scalar inputs, or with 1D vector inputs.  For MATLAB, the 1D vector must be a column vector not a row vector (while the code could check and transpose if neccessary, that would slow it down.) For Python, you must have NumPy installed and the inputs can be a list or NumPy array.
@@ -44,7 +59,7 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, hene we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
 
 ## Examples
-For all 3 languages, the output's 1st dimension is always number of records (=1 if scalar) and the 2nd dimension is always size 3 for the B-vector components, but some langues are row-major, other column-major. This is best seen in the example outputs below that all give the same inputs in each test, but the outputs may be transposed from each other.
+For all 3 languages, the output's 1<sup>st</sup> dimension is always number of records (=1 if scalar) and the 2<sup>nd</sup> dimension is always size 3 for the B-vector components, but some langues are row-major, other column-major. This is best seen in the example outputs below that all give the same inputs in each test, but the outputs may be transposed from each other.
 
 The following examples (same sitution for each language) all use *jovian_jrm33_order13_internal_rtp* and *jovian_jrm33_order13_internal_xyz*, but these can be simply swapped with any of the other models files in this collection, they all have the same input and output formats.
 
