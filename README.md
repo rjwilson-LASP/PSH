@@ -4,7 +4,7 @@
 
 **Citation**: *TBD*
 
-**Thanks to**: F. Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verifcations!
+**Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verification!
 
 **Table of Contents**:
 - [Initial Problem](README.md#initial-problem)
