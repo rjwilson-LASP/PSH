@@ -562,7 +562,7 @@ for model in (models_to_do): # loop for different models?
 "",
 "Version Info:",
 " Last update of this file: %s by user %s. "%(datetime.today(),os.getlogin()),
-" This code was re-written/re-formatted by Rob's python code:",
+" This code was re-written/re-formatted by the Mother_Source python code:",
 "  %s"%this_file_path,
 "  which itself was last updated at UTC %s."%this_file_time.strftime("%Y-%m-%dT%H:%M:%S"),
 ""])

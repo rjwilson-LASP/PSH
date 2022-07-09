@@ -24,10 +24,10 @@ FUNCTION jovian_isaac_order10_internal_rtp, r_rj, colat_rads, elong_rads
   ;  See the DOI above for a list of DOIs for each specific Github released version.
   ;
   ; Version Info:
-  ;  Last update of this file: 2022-07-09 11:48:27.758392 by user wilsonr. 
-  ;  This code was re-written/re-formatted by Rob's python code:
+  ;  Last update of this file: 2022-07-09 11:51:05.688642 by user wilsonr. 
+  ;  This code was re-written/re-formatted by the Mother_Source python code:
   ;   /Users/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-  ;   which itself was last updated at UTC 2022-07-09T17:48:18.
+  ;   which itself was last updated at UTC 2022-07-09T17:50:57.
   ;
   ;  The Spherical Harmonic g and h values used for this order 10 code are below: 
   ;  
