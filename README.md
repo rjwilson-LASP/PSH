@@ -2,7 +2,9 @@
 
 **Authors**:  M. Brennan, M.K. James, G. Provan, M.F. Vogt and R.J. Wilson
 
-**Citation**: [![DOI](https://zenodo.org/badge/510879555.svg)](https://zenodo.org/badge/latestdoi/510879555)
+**Citation doi**: [10.5281/zenodo.6814109](https://doi.org/10.5281/zenodo.6814109) (For all versions.)
+
+Each version release also has its own DOI, click the link above to get to the DOI of specific versions.
 
 **Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verification!
 
@@ -24,12 +26,12 @@
 There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, to what precision their $g$ and $h$ values were, and we suspect users may have forgotten to adjust older models for their different R<sub>J</sub>.  The aim here is to have a standard set of efficient codes, that people can just use and cite.  
 
 ## Solution
-These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in [**MATLAB**](https://www.mathworks.com/products/matlab.html), [**IDL**](https://www.l3harrisgeospatial.com/Software-Technology/IDL) and [**Python 3**](https://www.python.org/).  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
+These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in [**MATLAB**](https://www.mathworks.com/products/matlab.html), [**IDL**](https://www.l3harrisgeospatial.com/Software-Technology/IDL) and [**Python 3**](https://www.python.org/).  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far, the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
 
-Just download the particular file you want (language, particular model, and if Cartesian (xyz) or Spherical (rtp)) to your local directory, and run.  No 'install' required and each code is independent.  They can be run with scalar inputs, or with 1D vector inputs.  For MATLAB, the 1D vector must be a column vector not a row vector (while the code could check and transpose if neccessary, that would slow it down.) For Python, you must have NumPy installed and the inputs can be a list or NumPy array.
+Just download the particular file you want (language, particular model, and if Cartesian (xyz) or Spherical (rtp)) to your local directory, and run.  No 'install' required and each code is independent.  They can be run with scalar inputs, or with 1D vector inputs.  For MATLAB, the 1D vector must be a column vector not a row vector (while the code could check and transpose, if necessary, that would slow it down.) For Python, you must have NumPy installed and the inputs can be a list or NumPy array.
 
 The comments at the top of each code provide citations to papers where the *g* and *h* coefficients were sourced, and other info.
-All inputs are in a **right-handed System III (1965)** frame, with distances in units of R<sub>J</sub>, where **1 R<sub>J</sub> = 71,492 km always**, and angles (for spherical) in units of radians.  All these codes are set up to use degree = order, and for convience, we simply refer to both degree and order as order.
+All inputs are in a **right-handed System III (1965)** frame, with distances in units of R<sub>J</sub>, where **1 R<sub>J</sub> = 71,492 km always**, and angles (for spherical) in units of radians.  All these codes are set up to use degree = order, and for convenience, we simply refer to both degree and order as order.
 
 These codes will take inputs in Cartesian ([*x*,*y*,*z*] in units of R<sub>J</sub>) or Spherical ([*r*, *Co-Lat.*, *East Long.*] in units of R<sub>J</sub> and radians) and return the internal planetary field model values ([*B<sub>x</sub>*, *B<sub>y</sub>*, *B<sub>z</sub>*] or [*B<sub>r</sub>*, *B<sub>theta</sub>*, *B<sub>phi</sub>*] respectively, in units of nT). For older models that used different values of R<sub>J</sub>, our codes below still expect inputs where R<sub>J</sub> = 71,492 km, and will adjust the R<sub>J</sub> for you within the code.
 
@@ -37,7 +39,7 @@ Files can be found under the Planet directory, then language subdirectories.  Fi
 
 *The directory Mother_Source is not expected to be used by you, but contains the script that writes out all the MATLAB, IDL, Python codes, and is only here for completeness. Ignore it.*
 
-These run quickly, but the higher the order, the longer it takes simply due to more computations required.  The actual speed will depend on your machine, your operating system, and which versions of IDL, Matlab or Python 3 you have installed.  In a test in 2022, running jrm33 order 13 in MATLAB on a Mac for a vector of ~2 million points took around 5s. 
+These run quickly, but the higher the order, the longer it takes simply due to more computations required.  The actual speed will depend on your machine, your operating system, and which versions of IDL, MATLAB or Python 3 you have installed.  In a test in 2022, running jrm33 order 13 in MATLAB on a Mac for a vector of ~2 million points took around 5s. 
 
 ## Spherical Harmonic Models Included
 
@@ -58,12 +60,12 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 [^3]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
 [^4]: The PDS archive is cited as year 2020 here, but was originally from 2017.  The models were added to this dataset in later years, but same doi for the whole dataset, hene the year may be later than that of the original papers.
 
-The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, hene we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
+The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, so we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
 
 ## Examples
-For all 3 languages, the output's 1<sup>st</sup> dimension is always number of records (=1 if scalar) and the 2<sup>nd</sup> dimension is always size 3 for the B-vector components, but some langues are row-major, other column-major. This is best seen in the example outputs below that all give the same inputs in each test, but the outputs may be transposed from each other.
+For all 3 languages, the output's 1<sup>st</sup> dimension is always number of records (=1 if scalar) and the 2<sup>nd</sup> dimension is always size 3 for the B-vector components, but some languages are row-major, other column-major. This is best seen in the example outputs below that all give the same inputs in each test, but the outputs may be transposed from each other.
 
-The following examples (same sitution for each language) all use *jovian_jrm33_order13_internal_rtp* and *jovian_jrm33_order13_internal_xyz*, but these can be simply swapped with any of the other models files in this collection, they all have the same input and output formats.
+The following examples (same situation for each language) all use *jovian_jrm33_order13_internal_rtp* and *jovian_jrm33_order13_internal_xyz*, but these can be simply swapped with any of the other model files in this collection, they all have the same input and output formats.
 
 ### MATLAB
 ```MATLAB
@@ -228,7 +230,7 @@ We have tested the JupiterMag codes against the codes here, and for same inputs 
 
 ## Speed Tests
 The following speed tests were done on a Mac in 2022, but speed depends on your physical computer, your operating system, what else you're running and even which version of IDL or Matlab you have.  e.g. IDL 8.4 took 17s to run our code in a test, but the same test on IDL 8.8 took 14s.
-For below we test both the spherical (RTP) codes and Cartesian (xyz), when running 75641 test positions once as a vector, or as 75641 scalars in a FOR loop.  We show comparisions of the 3 langauge codes in this respository, and also the sister [*JupiterMag* code](README.md#solution-2-jupitermag).
+For below we test both the spherical (RTP) codes and Cartesian (xyz), when running 75641 test positions once as a vector, or as 75641 scalars in a FOR loop.  We show comparisons of the 3 language codes in this repository, and also the sister [*JupiterMag* code](README.md#solution-2-jupitermag).
 
 ![speedtest](https://user-images.githubusercontent.com/91491246/178030181-12f68efe-b109-4a75-9d55-bcc26be2ce84.png)
 
