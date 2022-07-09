@@ -554,6 +554,11 @@ for model in (models_to_do): # loop for different models?
          
         readme.extend([
 "",
+"Citation Info:",
+" DOI: 10.5281/zenodo.6814109     This doi links to all versions of code at the Github.",
+" Individual versions released on https://github.com/rjwilson-LASP/PSH) can have a different DOI,",
+" See the DOI above for a list of DOIs for each specific Github released version."
+"",
 "Version Info:",
 " Last update of this file: %s by user %s. "%(datetime.today(),os.getlogin()),
 " This code was re-written/re-formatted by Rob's python code:",
