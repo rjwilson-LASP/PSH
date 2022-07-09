@@ -2,7 +2,7 @@
 
 **Authors**:  M. Brennan, M.K. James, G. Provan, M.F. Vogt and R.J. Wilson
 
-**Citation**: *TBD*
+**Citation**: [![DOI](https://zenodo.org/badge/510879555.svg)](https://zenodo.org/badge/latestdoi/510879555)
 
 **Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verification!
 
