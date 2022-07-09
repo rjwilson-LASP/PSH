@@ -556,7 +556,8 @@ for model in (models_to_do): # loop for different models?
 "",
 "Citation Info:",
 " DOI: 10.5281/zenodo.6814109     This doi links to all versions of code at the Github.",
-" Individual versions released on https://github.com/rjwilson-LASP/PSH) can have a different DOI,",
+" Github: https://github.com/rjwilson-LASP/PSH",
+" Individual versions released on the Github repository can have a different DOI,",
 " See the DOI above for a list of DOIs for each specific Github released version."
 "",
 "Version Info:",
