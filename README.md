@@ -1,5 +1,8 @@
 # PSH: Planetary Spherical Harmonics community code
 
+Internal planetary field code from spherical harmonics, in IDL, MATLAB and Python 3. This is part of a community code project: [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
+
+
 **Authors**:  M. Brennan, M.K. James, G. Provan, M.F. Vogt and R.J. Wilson
 
 **Citation doi**: [10.5281/zenodo.6814109](https://doi.org/10.5281/zenodo.6814109) (For all versions.)
