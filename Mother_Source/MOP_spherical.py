@@ -254,7 +254,7 @@ for model in (models_to_do): # loop for different models?
 
         elif (model == 'jrm33_order13') or (model == 'jrm33_order18') or (model == 'jrm33_order30'):
             planet = 'Jupiter'
-            ref = 'Connerney et al. (2021),  https://doi.org/10.1029/2021JE007055'
+            ref = 'Connerney et al. (2022),  https://doi.org/10.1029/2021JE007055'
             gh_notes = 'See supplemental online information, file 2021JE007055-sup-0002-Supporting Information SI-S02.mod'
             if (model == 'jrm33_order13'):
                 degree   = 13
