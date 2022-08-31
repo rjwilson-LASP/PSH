@@ -26,10 +26,10 @@ def jovian_vit4_order04_internal_rtp( r_rj, colat_rads, elong_rads):
     #  See the DOI above for a list of DOIs for each specific Github released version.
     #
     # Version Info:
-    #  Last update of this file: 2022-07-09 11:51:05.678455 by user wilsonr. 
+    #  Last update of this file: 2022-08-31 11:48:40.433412 by user wilsonr. 
     #  This code was re-written/re-formatted by the Mother_Source python code:
-    #   /Users/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-    #   which itself was last updated at UTC 2022-07-09T17:50:57.
+    #   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
+    #   which itself was last updated at UTC 2022-08-31T17:46:34.
     #
     #  The Spherical Harmonic g and h values used for this order 4 code are below: 
     #  
