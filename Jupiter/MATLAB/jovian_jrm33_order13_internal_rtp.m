@@ -1,7 +1,7 @@
 function Brtp = jovian_jrm33_order13_internal_rtp( r_rj, colat_rads, elong_rads)
 % Code to calculate the JRM33_ORDER13 model of Jupiter's internal magnetic field model
 % with Degree 13 and Order 13.
-% Reference: Connerney et al. (2021),  https://doi.org/10.1029/2021JE007055
+% Reference: Connerney et al. (2022),  https://doi.org/10.1029/2021JE007055
 %
 % Required inputs (System III (1965) Spherical, right handed, and assuming 1 Rj = 71492 km):
 %  r_rj       - radial distance, in Rj.
@@ -24,10 +24,10 @@ function Brtp = jovian_jrm33_order13_internal_rtp( r_rj, colat_rads, elong_rads)
 %  See the DOI above for a list of DOIs for each specific Github released version.
 %
 % Version Info:
-%  Last update of this file: 2022-07-09 11:51:05.650761 by user wilsonr. 
+%  Last update of this file: 2022-08-31 11:48:40.271531 by user wilsonr. 
 %  This code was re-written/re-formatted by the Mother_Source python code:
-%   /Users/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-%   which itself was last updated at UTC 2022-07-09T17:50:57.
+%   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
+%   which itself was last updated at UTC 2022-08-31T17:46:34.
 %
 %  The Spherical Harmonic g and h values used for this order 13 code are below: 
 %  
@@ -94,7 +94,7 @@ elong_rads_dbl = double(  elong_rads);
 %%
 % ============
 % Begin hard-coding for JRM33_ORDER13
-% Values from Connerney et al. (2021),  https://doi.org/10.1029/2021JE007055
+% Values from Connerney et al. (2022),  https://doi.org/10.1029/2021JE007055
 % See supplemental online information, file 2021JE007055-sup-0002-Supporting Information SI-S02.mod
 % ============
 

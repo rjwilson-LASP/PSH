@@ -24,10 +24,10 @@ function Bxyz = jovian_vipal_order05_internal_xyz( x_rj, y_rj, z_rj)
 %  See the DOI above for a list of DOIs for each specific Github released version.
 %
 % Version Info:
-%  Last update of this file: 2022-07-09 11:51:05.685415 by user wilsonr. 
+%  Last update of this file: 2022-08-31 11:48:40.505033 by user wilsonr. 
 %  This code was re-written/re-formatted by the Mother_Source python code:
-%   /Users/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-%   which itself was last updated at UTC 2022-07-09T17:50:57.
+%   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
+%   which itself was last updated at UTC 2022-08-31T17:46:34.
 %
 %  The Spherical Harmonic g and h values used for this order 5 code are below: 
 %  
