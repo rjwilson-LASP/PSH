@@ -64,13 +64,3 @@ identifiers:
       This DOI represents all software versions, and
       will always resolve to the latest one. 
 repository-code: 'https://github.com/rjwilson-LASP/PSH'
-abstract: >-
-  Internal planetary field code from spherical
-  harmonics, in IDL, MATLAB and Python 3. 
-keywords:
-  - MATLAB
-  - IDL
-  - Python
-license: GPL-3.0
-version: v0.1.1
-date-released: '2022-07-09'
