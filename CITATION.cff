@@ -27,17 +27,17 @@ authors:
     family-names: Provan
     email: gp31@le.ac.uk
     affiliation: >-
-      Department of Physics and Astronomy, University
+      School of Physics and Astronomy, University
       of Leicester, Leicester, UK
     orcid: 'https://orcid.org/0000-0001-7442-4154'
   - given-names: A.
     family-names: Kamran
     email: ak741@leicester.ac.uk
     affiliation: >-
-      Department of Physics and Astronomy, University
+      School of Physics and Astronomy, University
       of Leicester, Leicester, UK
   - affiliation: >-
-      Department of Physics and Astronomy, University
+      School of Physics and Astronomy, University
       of Leicester, Leicester, UK
     given-names: M.K.
     family-names: James
@@ -51,10 +51,10 @@ authors:
       Jet Propulsion Laboratory, California Institute
       of Technology, Pasadena, CA, USA
   - affiliation: >-
-      Department of Physics and Astronomy, University
+      School of Physics and Astronomy, University
       of Leicester, Leicester, UK
     orcid: 'https://orcid.org/0000-0002-4041-0034'
-    email: swhc1@ion.le.ac.uk
+    email: swhc1@leicester.ac.uk
     family-names: Cowley
     given-names: S.W.H.
 identifiers:
