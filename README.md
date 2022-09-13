@@ -8,7 +8,7 @@ Internal planetary field code from spherical harmonics, in IDL, MATLAB and Pytho
 
 Each version release also has its own DOI, click the link above to get to the DOI of specific versions.
 
-**Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verification!
+**Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against and Jack Connerney for verification!
 
 **Table of Contents**:
 
