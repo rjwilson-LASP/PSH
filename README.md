@@ -2,7 +2,7 @@
 
 Internal planetary field code from spherical harmonics, in IDL, MATLAB and Python 3. This is part of a community code project: [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
 
-**Authors**: R.J. Wilson, M.F. Vogt, G. Provan, A. Kamran, M.K. James, S.W.H Cowley and M. Brennan. 
+**Authors**: R.J. Wilson, M.F. Vogt, G. Provan, A. Kamran, M.K. James, M. Brennan and S.W.H Cowley. 
 
 **Citation doi**: [10.5281/zenodo.6814109](https://doi.org/10.5281/zenodo.6814109) (For all versions.)
 
