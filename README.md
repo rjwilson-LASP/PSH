@@ -2,8 +2,7 @@
 
 Internal planetary field code from spherical harmonics, in IDL, MATLAB and Python 3. This is part of a community code project: [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
 
-
-**Authors**:  M. Brennan, M.K. James, G. Provan, M.F. Vogt and R.J. Wilson
+**Authors**: R.J. Wilson, M.F. Vogt, G. Provan, A. Kamran, M.K. James, M. Brennan and S.W.H Cowley. 
 
 **Citation doi**: [10.5281/zenodo.6814109](https://doi.org/10.5281/zenodo.6814109) (For all versions.)
 
@@ -12,6 +11,7 @@ Each version release also has its own DOI, click the link above to get to the DO
 **Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against, Stan Cowley for helpful discussions/advice and Jack Connerney for verification!
 
 **Table of Contents**:
+
 - [Initial Problem](README.md#initial-problem)
 - [Solution](README.md#solution)
 - [Spherical Harmonic Models Included](README.md#spherical-harmonic-models-included)
@@ -24,11 +24,12 @@ Each version release also has its own DOI, click the link above to get to the DO
 - [See Also](README.md#see-also)
 - [References](README.md#references)
 
-
 ## Initial Problem
+
 There are many past models, with the *g* and *h* coefficients often quoted in multiple places: with different units (G or nT, or stated as G but really nT), or different levels of precision (and occasionally some typos creep in between copies), or were originally in a coordinate system that wasn't right-handed System III (1965), or assumed a different planetary radius (Jovian Radius = R<sub>J</sub>).  Different users making they own codes may get different results from each other depending on which paper they used for their *g* and *h* values, to what precision their $g$ and $h$ values were, and we suspect users may have forgotten to adjust older models for their different R<sub>J</sub>.  The aim here is to have a standard set of efficient codes, that people can just use and cite.  
 
 ## Solution
+
 These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in [**MATLAB**](https://www.mathworks.com/products/matlab.html), [**IDL**](https://www.l3harrisgeospatial.com/Software-Technology/IDL) and [**Python 3**](https://www.python.org/).  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far, the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
 
 Just download the particular file you want (language, particular model, and if Cartesian (xyz) or Spherical (rtp)) to your local directory, and run.  No 'install' required and each code is independent.  They can be run with scalar inputs, or with 1D vector inputs.  For MATLAB, the 1D vector must be a column vector not a row vector (while the code could check and transpose, if necessary, that would slow it down.) For Python, you must have NumPy installed and the inputs can be a list or NumPy array.
@@ -62,15 +63,16 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 [^2]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 coefficients (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
 [^3]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
 [^4]: The PDS archive is cited as year 2020 here, but was originally from 2017.  The models were added to this dataset in later years, but same doi for the whole dataset, hene the year may be later than that of the original papers.
-
 The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, so we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
 
 ## Examples
+
 For all 3 languages, the output's 1<sup>st</sup> dimension is always number of records (=1 if scalar) and the 2<sup>nd</sup> dimension is always size 3 for the B-vector components, but some languages are row-major, other column-major. This is best seen in the example outputs below that all give the same inputs in each test, but the outputs may be transposed from each other.
 
 The following examples (same situation for each language) all use *jovian_jrm33_order13_internal_rtp* and *jovian_jrm33_order13_internal_xyz*, but these can be simply swapped with any of the other model files in this collection, they all have the same input and output formats.
 
 ### MATLAB
+
 ```MATLAB
 function  Matlab_test
  
@@ -96,7 +98,9 @@ Bxyz % print to screen
  
 whos Brtp_scalar Brtp Bxyz
 ```
+
 Gives the output:
+
 ```
 Brtp_scalar =
 
@@ -124,6 +128,7 @@ Bxyz =
 ```
 
 ### IDL
+
 ```IDL
 PRO IDL_Test
   ; Spherical coordinate example for scalar at 10 Rj, Colatitude on equator
@@ -152,7 +157,9 @@ PRO IDL_Test
   HELP, Brtp_scalar, Brtp, Bxyz
 END
 ```
+
 Gives the output:
+
 ```
 Brtp_scalar = 
       -79.839826
@@ -172,6 +179,7 @@ BXYZ            DOUBLE    = Array[4, 3]
 ```
 
 ### Python 3
+
 ```Python
 import numpy as np
 import jovian_jrm33_order13_internal_rtp as jrm33o13_rtp
@@ -208,6 +216,7 @@ print('Shape of Bxyz       : ', Bxyz.shape)
 ```
 
 Gives the output:
+
 ```
 Brtp_scalar = 
 [-79.8398262  399.48279169 -53.48232536]
@@ -227,17 +236,20 @@ Shape of Bxyz       :  (4, 3)
 ```
 
 ## Solution #2: JupiterMag
+
 There is sister community code that will do the same models here, and give the same results, over at [https://github.com/mattkjames7/JupiterMag](https://github.com/mattkjames7/JupiterMag).  This is a Python 3 package that requires a simple install, and has more flexibility than this code, e.g. you could have Cartesian inputs, but outputs in Spherical.  It also includes code for a current sheet, and field line tracing.
 
 We have tested the JupiterMag codes against the codes here, and for same inputs we still get the same outputs to within the same rounding errors.
 
 ## Speed Tests
+
 The following speed tests were done on a Mac in 2022, but speed depends on your physical computer, your operating system, what else you're running and even which version of IDL or Matlab you have.  e.g. IDL 8.4 took 17s to run our code in a test, but the same test on IDL 8.8 took 14s.
 For below we test both the spherical (RTP) codes and Cartesian (xyz), when running 75641 test positions once as a vector, or as 75641 scalars in a FOR loop.  We show comparisons of the 3 language codes in this repository, and also the sister [*JupiterMag* code](README.md#solution-2-jupitermag).
 
 ![speedtest](https://user-images.githubusercontent.com/91491246/178030181-12f68efe-b109-4a75-9d55-bcc26be2ce84.png)
 
 ## See Also
+
 Aside from [https://github.com/mattkjames7/JupiterMag](https://github.com/mattkjames7/JupiterMag), there are also current sheet models available for download.  Rather than list them here, see the summary list at [https://lasp.colorado.edu/home/mop/missions/juno/community-code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
 
 ## References
