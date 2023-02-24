@@ -1,15 +1,15 @@
 # PSH: Planetary Spherical Harmonics community code
 
-Internal planetary field code from spherical harmonics, in IDL, MATLAB and Python 3. This is part of a community code project: [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
+Internal planetary field code from spherical harmonics, in IDL, MATLAB and Python.  
+This is part of a community code project: [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
 
 **Authors**: R.J. Wilson, M.F. Vogt, G. Provan, A. Kamran, M.K. James, M. Brennan and S.W.H Cowley. 
 
 **Code Citation DOI**: [10.5281/zenodo.6814109](https://doi.org/10.5281/zenodo.6814109) (For all versions.)  
 Each version release also has its own DOI, click the link above to get to the DOI of specific versions.
 
-**Journal Paper**:  
-Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. **Space Sci Rev** _219_, 15 (2023). [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)  
-SharedIt link to the PDF (does not require access to SSR): [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
+**Journal Paper DOI**: [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)
+(PDF via DOI or [https://rdcu.be/c5I71](https://rdcu.be/c5I71), see [Journal Publication](README.md#journal-publication).)
 
 **Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against and Jack Connerney for verification!
 
@@ -24,6 +24,7 @@ SharedIt link to the PDF (does not require access to SSR): [https://rdcu.be/c5I7
   - [Python 3](README.md#python-3)
 - [Solution #2: JupiterMag](README.md#solution-2-jupitermag)
 - [Speed Tests](README.md#speed-tests)
+- [Journal Publication](README.md#journal-publication)
 - [See Also](README.md#see-also)
 - [References](README.md#references)
 
@@ -251,6 +252,17 @@ For below we test both the spherical (RTP) codes and Cartesian (xyz), when runni
 
 ![speedtest](https://user-images.githubusercontent.com/91491246/178030181-12f68efe-b109-4a75-9d55-bcc26be2ce84.png)
 
+## Journal Publication
+In 2022, the whole community code project team (see [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)) wrote a paper about our efforts, the spherical harmonic coefficients used, and the differents codes.  This was published in January 2023 in Space Science Reviews:
+
+Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. **Space Sci Rev** _219_, 15 (2023). [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)  
+
+They also provided a SharedIt link to the PDF, which does not require access to SSR to open: [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
+
+Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of [JupiterMag Community Code](https://doi.org/10.5281/zenodo.6822191), but during the publication process it gained a weird smear artifact when converting from our oriignal figure PDF.  We spotted this too late to correct in the paper, but the Jupitermag codes does provide a clean output!
+
+If using our codes in your study, please cite both our codes and this paper in your publications.
+
 ## See Also
 
 Aside from [https://github.com/mattkjames7/JupiterMag](https://github.com/mattkjames7/JupiterMag), there are also current sheet models available for download.  Rather than list them here, see the summary list at [https://lasp.colorado.edu/home/mop/missions/juno/community-code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)
@@ -266,3 +278,4 @@ Aside from [https://github.com/mattkjames7/JupiterMag](https://github.com/mattkj
 - Connerney, J. E. P., et al. (2022). A New Model of Jupiter's Magnetic Field at the Completion of Juno's Prime Mission. *Journal of Geophysical Research (Planets)*, 127 (2), e07055. doi: [10.1029/2021JE007055](https://doi.org/10.1029/2021JE007055)
 - Hess, S. L. G., Bonfond, B., Zarka, P., Grodent, D. (2011). Model of the Jovian magnetic field topology constrained by the Io auroral emissions. *Journal of Geophysical Research (Space Physics)*, 116 (A5), A05217. doi: [10.1029/2010JA016262](https://doi.org/10.1029/2010JA016262)
 - Hess, S. L. G., Bonfond, B., Bagenal, F., Lamy, L. (2017). A model of the Jovian internal field derived from in-situ and auroral constraints. In G. Fischer, G. Mann, M. Panchenko, & P. Zarka (Eds.), *Planetary radio emissions viii* (p. 157-167). doi: [10.1553/PRE8s157](https://doi.org/10.1553/PRE8s157)
+- Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. _Space Sci Rev_, 219, 15 (2023). [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)  
