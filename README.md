@@ -4,9 +4,12 @@ Internal planetary field code from spherical harmonics, in IDL, MATLAB and Pytho
 
 **Authors**: R.J. Wilson, M.F. Vogt, G. Provan, A. Kamran, M.K. James, M. Brennan and S.W.H Cowley. 
 
-**Citation doi**: [10.5281/zenodo.6814109](https://doi.org/10.5281/zenodo.6814109) (For all versions.)
-
+**Code Citation DOI**: [10.5281/zenodo.6814109](https://doi.org/10.5281/zenodo.6814109) (For all versions.)  
 Each version release also has its own DOI, click the link above to get to the DOI of specific versions.
+
+**Journal Paper**:  
+Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. **Space Sci Rev** _219_, 15 (2023). [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)  
+SharedIt link to the PDF (does not require access to SSR): [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
 
 **Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against and Jack Connerney for verification!
 
