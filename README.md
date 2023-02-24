@@ -29,13 +29,13 @@ Each version release also has its own DOI, click the link above to get to the DO
 - [References](README.md#references)
 
 ## Journal Publication
-In 2022, the whole community code project team (see [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)) wrote a paper about our efforts, the spherical harmonic coefficients used, and the differents codes.  This was published in January 2023 in Space Science Reviews:
+In 2022, the whole community code project team (see [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)) wrote a paper about our efforts, the spherical harmonic coefficients used, and the different codes.  This was published in January 2023 in Space Science Reviews:
 
 Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. **Space Sci Rev** _219_, 15 (2023). [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)  
 
 They also provided a SharedIt link to the PDF, which does not require access to SSR to open: [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
 
-Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of the Python [JupiterMag Community Code](https://doi.org/10.5281/zenodo.6822191), but during the publication process it gained a weird smear artifact when converted from our orignal PDF figure.  We spotted this too late to correct in the paper, but the Jupitermag code does provide a clean output! Feel free to try it yourself.
+Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of the Python [_JupiterMag Community Code_]([https://doi.org/10.5281/zenodo.6822191](https://github.com/mattkjames7/JupiterMag)), but during the publication process it gained a weird smear artifact when converted from our original PDF figure.  We spotted this too late to correct in the paper, but the _JupiterMag_ code does provide a clean output! Feel free to try it yourself.
 
 If using our codes in your study, please cite both our codes and this paper in your publications.
 
@@ -46,7 +46,7 @@ There are many past models, with the *g* and *h* coefficients often quoted in mu
 
 ## Solution
 
-These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in [**MATLAB**](https://www.mathworks.com/products/matlab.html), [**IDL**](https://www.l3harrisgeospatial.com/Software-Technology/IDL) and [**Python 3**](https://www.python.org/).  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated in to the three languages, with our testing so far, the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
+These are Community Codes for Planetary Spherical Harmonic Internal Field codes, in [**MATLAB**](https://www.mathworks.com/products/matlab.html), [**IDL**](https://www.l3harrisgeospatial.com/Software-Technology/IDL) and [**Python 3**](https://www.python.org/).  These are platform independent, and should work on PC, Mac or Linux. These are essentially the same code translated into the three languages, with our testing so far, the 3 languages give the same results to less than 10<sup>-11</sup> nT (rounding errors).
 
 Just download the particular file you want (language, particular model, and if Cartesian (xyz) or Spherical (rtp)) to your local directory, and run.  No 'install' required and each code is independent.  They can be run with scalar inputs, or with 1D vector inputs.  For MATLAB, the 1D vector must be a column vector not a row vector (while the code could check and transpose, if necessary, that would slow it down.) For Python, you must have NumPy installed and the inputs can be a list or NumPy array.
 
@@ -64,7 +64,7 @@ These run quickly, but the higher the order, the longer it takes simply due to m
 ## Spherical Harmonic Models Included
 
 We recommend using JRM33 order 13, but here is the list of existing models.  All these were developed in a right-handed System III (1965) system (some earlier models had used System III (1957)[^1]), but assumed different values for what 1 R<sub>J</sub> was.
-[^1]: The SHA model was originally calculated in the System III (1957) frame, but *Connerney* 2007 converted the *g* and *h* coefficients in to System III (1965), however G<sub>3</sub><sup>0</sup> is listed as 11,300 nT, but we believe this has a sign typo and should be -11,300 nT.  The R<sub>J</sub> value is not specified, but we believe they used 71,398 km.
+[^1]: The SHA model was originally calculated in the System III (1957) frame, but *Connerney* 2007 converted the *g* and *h* coefficients into System III (1965), however G<sub>3</sub><sup>0</sup> is listed as 11,300 nT, but we believe this has a sign typo and should be -11,300 nT.  The R<sub>J</sub> value is not specified, but we believe they used 71,398 km.
 
 | Model | Order | Planet  | Original Model Reference | R<sub>J</sub> used in original work | Reference used for *g* and *h* values | Other references for *g* and *h* values |
 | ----- | ----- | ------- |----------------------- | ---- | ---------------------- | ---------------------- |
@@ -76,9 +76,9 @@ We recommend using JRM33 order 13, but here is the list of existing models.  All
 | VIT4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^2] | *Connerney* 2007 | *Hess et al.*, 2011[^3]  |
 | VIP4  |    4  | Jupiter | *Connerney et al.*, 1998  | 71,323 km[^2] | *Connerney* 2007 | *Hess et al.*, 2011 |
 | O6    |    3  | Jupiter | *Connerney* 1992          | 71,372 km |*Connerney* 1992 | *Connerney et al.*, 1998 |
-[^2]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 coefficients (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
+[^2]: R<sub>J</sub> = 71,323 km based on table 1 of the original paper, and thus used here.  However, the original paper also states a value of 71,398 km earlier in the text, while the 2007 book suggests 71,372 km earlier in the text then doesn't explicitly list an R<sub>J</sub> with the table for VIP4 and VIT4 coefficients (yet does list specific Rs for some other models).  However, Connerney (private communication) says to use the earliest publication, hence table 1 of original paper.
 [^3]: h<sub>4</sub><sup>4</sup> has a typo, probably should be 0.1264 G.
-[^4]: The PDS archive is cited as year 2020 here, but was originally from 2017.  The models were added to this dataset in later years, but same doi for the whole dataset, hene the year may be later than that of the original papers.
+[^4]: The PDS archive is cited as year 2020 here, but was originally from 2017.  The models were added to this dataset in later years, but it is the same DOI for the whole dataset, hence the year may be later than that of the original papers.
 The reference papers may provide *g* and *h* values to higher orders, but the authors do not always trust those higher order values (see their papers). Hence the order used here may be lower than given what you can find in publications.  In the case of JRM33, the authors used both order 13 and order 18 for plots in their paper, so we provide code for both, but we recommend using JRM order 13 for your studies (*personal communication with authors*).
 
 ## Examples
@@ -259,7 +259,7 @@ We have tested the JupiterMag codes against the codes here, and for same inputs 
 
 ## Speed Tests
 
-The following speed tests were done on a Mac in 2022, but speed depends on your physical computer, your operating system, what else you're running and even which version of IDL or Matlab you have.  e.g. IDL 8.4 took 17s to run our code in a test, but the same test on IDL 8.8 took 14s.
+The following speed tests were done on a Mac in 2022, but speed depends on your physical computer, your operating system, what else you're running and even which version of IDL or MATLAB you have.  e.g. IDL 8.4 took 17s to run our code in a test, but the same test on IDL 8.8 took 14s.
 For below we test both the spherical (RTP) codes and Cartesian (xyz), when running 75641 test positions once as a vector, or as 75641 scalars in a FOR loop.  We show comparisons of the 3 language codes in this repository, and also the sister [*JupiterMag* code](README.md#solution-2-jupitermag).
 
 ![speedtest](https://user-images.githubusercontent.com/91491246/178030181-12f68efe-b109-4a75-9d55-bcc26be2ce84.png)
