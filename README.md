@@ -15,6 +15,7 @@ Each version release also has its own DOI, click the link above to get to the DO
 
 **Table of Contents**:
 
+- [Journal Publication](README.md#journal-publication)
 - [Initial Problem](README.md#initial-problem)
 - [Solution](README.md#solution)
 - [Spherical Harmonic Models Included](README.md#spherical-harmonic-models-included)
@@ -24,9 +25,20 @@ Each version release also has its own DOI, click the link above to get to the DO
   - [Python 3](README.md#python-3)
 - [Solution #2: JupiterMag](README.md#solution-2-jupitermag)
 - [Speed Tests](README.md#speed-tests)
-- [Journal Publication](README.md#journal-publication)
 - [See Also](README.md#see-also)
 - [References](README.md#references)
+
+## Journal Publication
+In 2022, the whole community code project team (see [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)) wrote a paper about our efforts, the spherical harmonic coefficients used, and the differents codes.  This was published in January 2023 in Space Science Reviews:
+
+Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. **Space Sci Rev** _219_, 15 (2023). [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)  
+
+They also provided a SharedIt link to the PDF, which does not require access to SSR to open: [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
+
+Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of [JupiterMag Community Code](https://doi.org/10.5281/zenodo.6822191), but during the publication process it gained a weird smear artifact when converting from our oriignal figure PDF.  We spotted this too late to correct in the paper, but the Jupitermag codes does provide a clean output!
+
+If using our codes in your study, please cite both our codes and this paper in your publications.
+
 
 ## Initial Problem
 
@@ -251,17 +263,6 @@ The following speed tests were done on a Mac in 2022, but speed depends on your 
 For below we test both the spherical (RTP) codes and Cartesian (xyz), when running 75641 test positions once as a vector, or as 75641 scalars in a FOR loop.  We show comparisons of the 3 language codes in this repository, and also the sister [*JupiterMag* code](README.md#solution-2-jupitermag).
 
 ![speedtest](https://user-images.githubusercontent.com/91491246/178030181-12f68efe-b109-4a75-9d55-bcc26be2ce84.png)
-
-## Journal Publication
-In 2022, the whole community code project team (see [Magnetospheres of the Outer Planets Group Community Code](https://lasp.colorado.edu/home/mop/missions/juno/community-code)) wrote a paper about our efforts, the spherical harmonic coefficients used, and the differents codes.  This was published in January 2023 in Space Science Reviews:
-
-Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magnetic Fields: Community Code to Serve the Magnetospheres of the Outer Planets Community. **Space Sci Rev** _219_, 15 (2023). [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)  
-
-They also provided a SharedIt link to the PDF, which does not require access to SSR to open: [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
-
-Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of [JupiterMag Community Code](https://doi.org/10.5281/zenodo.6822191), but during the publication process it gained a weird smear artifact when converting from our oriignal figure PDF.  We spotted this too late to correct in the paper, but the Jupitermag codes does provide a clean output!
-
-If using our codes in your study, please cite both our codes and this paper in your publications.
 
 ## See Also
 
