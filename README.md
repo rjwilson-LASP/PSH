@@ -35,7 +35,7 @@ Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magneti
 
 They also provided a SharedIt link to the PDF, which does not require access to SSR to open: [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
 
-Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of the Python [_JupiterMag Community Code_]([https://doi.org/10.5281/zenodo.6822191](https://github.com/mattkjames7/JupiterMag)), but during the publication process it gained a weird smear artifact when converted from our original PDF figure.  We spotted this too late to correct in the paper, but the _JupiterMag_ code does provide a clean output! Feel free to try it yourself.
+Figure 1 of the paper was created using the _JupiterMag.Internal.JRMFig5()_ function of the Python [JupiterMag Community Code](https://github.com/mattkjames7/JupiterMag), but during the publication process it gained a weird smear artifact when converted from our original PDF figure.  We spotted this too late to correct in the paper, but the _JupiterMag_ code does provide a clean output! Feel free to try it yourself.
 
 If using our codes in your study, please cite both our codes and this paper in your publications.
 
