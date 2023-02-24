@@ -9,7 +9,7 @@ This is part of a community code project: [Magnetospheres of the Outer Planets G
 Each version release also has its own DOI, click the link above to get to the DOI of specific versions.
 
 **Journal Paper DOI**: [https://doi.org/10.1007/s11214-023-00961-3](https://doi.org/10.1007/s11214-023-00961-3)
-(PDF via DOI or [https://rdcu.be/c5I71](https://rdcu.be/c5I71), see [Journal Publication](README.md#journal-publication).)
+(PDF via DOI, or [https://rdcu.be/c5I71](https://rdcu.be/c5I71), see [Journal Publication](README.md#journal-publication).)
 
 **Thanks to**: Fran Bagenal for the original idea, Masafumi Imai for sharing their original code we could test against and Jack Connerney for verification!
 
@@ -35,7 +35,7 @@ Wilson, R.J., Vogt, M.F., Provan, G. et al. Internal and External Jovian Magneti
 
 They also provided a SharedIt link to the PDF, which does not require access to SSR to open: [https://rdcu.be/c5I71](https://rdcu.be/c5I71)
 
-Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of [JupiterMag Community Code](https://doi.org/10.5281/zenodo.6822191), but during the publication process it gained a weird smear artifact when converting from our oriignal figure PDF.  We spotted this too late to correct in the paper, but the Jupitermag codes does provide a clean output!
+Figure 1 of the paper was created using the JupiterMag.Internal.JRMFig5() function of the Python [JupiterMag Community Code](https://doi.org/10.5281/zenodo.6822191), but during the publication process it gained a weird smear artifact when converted from our orignal PDF figure.  We spotted this too late to correct in the paper, but the Jupitermag code does provide a clean output! Feel free to try it yourself.
 
 If using our codes in your study, please cite both our codes and this paper in your publications.
 
