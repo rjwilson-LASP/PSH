@@ -1279,7 +1279,7 @@ for model in (models_to_do): # loop for different models?
 
         IDLpro.extend([  "      IF (cos_theta GE 0d) THEN "+      "bf =  bbf "+              "ELSE "+            "bf = -bbf"])
         MATLAB.extend(["        if (cos_theta >= 0)" ,"            bf =  bbf;"      ,"        else" ,"            bf = -bbf;","        end"])
-        PYTHON.extend(["        if (cos_theta >= 0):","            bf =  bbf.copy()","        else:","            bf = np.float(-1)*bbf"])
+        PYTHON.extend(["        if (cos_theta >= 0):","            bf =  bbf.copy()","        else:","            bf = np.float64(-1)*bbf"])
 
 
         IDLpro.extend(["    ENDELSE"])

@@ -26,10 +26,10 @@ def jovian_vip4_order04_internal_rtp( r_rj, colat_rads, elong_rads):
     #  See the DOI above for a list of DOIs for each specific Github released version.
     #
     # Version Info:
-    #  Last update of this file: 2022-08-31 11:48:40.390952 by user wilsonr. 
+    #  Last update of this file: 2024-03-13 11:48:53.871585 by user wilsonr. 
     #  This code was re-written/re-formatted by the Mother_Source python code:
-    #   /Volumes/wilsonr/Documents/JADE/Level2_Processing_Code/IDL/Field_Model/2022/Git_initial/Mother_Source/MOP_spherical.py
-    #   which itself was last updated at UTC 2022-08-31T17:46:34.
+    #   /Users/wilsonr/Documents/Publications_Presentations/GitHub_Desktop/PSH/Mother_Source/MOP_spherical.py
+    #   which itself was last updated at UTC 2024-03-13T17:48:37.
     #
     #  The Spherical Harmonic g and h values used for this order 4 code are below: 
     #  
@@ -296,7 +296,7 @@ def jovian_vip4_order04_internal_rtp( r_rj, colat_rads, elong_rads):
             if (cos_theta >= 0):
                 bf =  bbf.copy()
             else:
-                bf = np.float(-1)*bbf
+                bf = np.float64(-1)*bbf
     else:
         bf = bbf.copy() # set size of array and do the 3rd case
         ind = np.where((bk == 1) & (cos_theta < 0))[0]
